@@ -62,6 +62,11 @@ Page({
       },
       success: res => {
         console.log(classification)
+        var reg = new RegExp(/\\/g);
+        for (let i = 0; i < res.data.length; i++) {
+          let temp = res.data[i].pic.replace(res, " ")
+          res.data[i].pic = JSON.parse(temp)
+        }
         if (res.data) {
           this.setData({
             curNav: classification,
@@ -89,12 +94,25 @@ Page({
       },
       success: res => {
         console.log(res)
-        if (res.data) {
+        var reg = new RegExp(/\\/g);
+        var that=this;
+        if (res.data.status == 20001) {
           this.setData({
             curNav: id,
+            navRightItems:[]
+            })
+        }else{
+          for (let i = 0; i < res.data.length; i++) {
+            let temp = res.data[i].pic.replace(res, " ")
+            res.data[i].pic = JSON.parse(temp)
+          }
+          console.log(res.data[0].pic)
+          that.setData({
+            curNav: id,
             navRightItems: res.data
-          })
+})
         }
+        app.globalData.id = 1;
       }
     })
 

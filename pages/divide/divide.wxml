@@ -3,15 +3,15 @@
       <view class="nav_left_items {{curNav == item.id ? 'active' : ' '}}" bindtap="switchRightTab" data-id="{{item.id}}">{{item.name}}</view>
     </block>
   </view>
-  <view class="nav_right" wx:if="{{navRightItems.title}}">
+  <view class="nav_right" wx:if="{{navRightItems[0]}}">
     <!--如果有数据，才遍历项-->
     <view wx:if="{{navRightItems}}">
       <block wx:for="{{navRightItems}}" wx:for-item="item" wx:key>
         <view class="nav_right_items">
           <navigator  url="/pages/detail/detail?No={{item.No}}">
             <view>
-              <block wx:if="{{item.pic}}">
-                <image src="{{item.pic}}"></image>
+              <block wx:if="{{item.pic[0]}}">
+                <image mode="aspectFit" src="https://{{item.pic[0]}}"></image>
               </block>
               <block wx:else>
                 <image src="../../resources/active1.png"></image>
