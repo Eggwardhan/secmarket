@@ -91,8 +91,8 @@ Page({
     interval:2000,
     swiperIndex: 0,
     autoplay:false,
-    imgUrls: ["/resources/test2.jpg" ,"http://images6.fanpop.com/image/photos/33700000/selena-gomez-2013-selena-gomez-33715236-1500-1745.jpg" ,
-    "../../resources/no-address.png" ]
+    imgUrls: ["/resources/demo2.png", "/resources/demo3.png","http://images6.fanpop.com/image/photos/33700000/selena-gomez-2013-selena-gomez-33715236-1500-1745.jpg" ,
+    "../../resources/demo1.png" ]
   },
   //search
   showInput: function() {

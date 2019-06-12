@@ -2,9 +2,9 @@
     <scroll-view scroll-y style="height: 1000rpx;">
 
   <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{commodity.commodityImage}}" wx:for-item="item">
+    <block wx:for="{{commodity.pic}}" wx:for-item="item">
       <swiper-item>
-        <image src="{{item}}" class="slide-image" />
+        <image src="https://{{item}}" class="slide-image" />
       </swiper-item>
     </block>
   </swiper>

@@ -65,6 +65,10 @@ Page({
       "content-type": "application/x-www-form-urlencoded"
     },
     success: res => {
+      var reg = new RegExp(/\\/g);
+        let temp = res.data.pic.replace(res, " ")
+        res.data.pic = JSON.parse(temp)
+
       console.log(res.data)
       if (res.data.status!=20001) {
         this.setData({

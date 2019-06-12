@@ -74,7 +74,7 @@
           <view class="main-container" wx:for="{{goodsList}}" wx:for-item="item" data-value="{{item}}">
             <view class="list-sec">
               <view class="top-sec" style="height:{{sysWidth}}rpx">
-                <image class="sec-img" src="{{item.pic}}" background-size="cover"></image>
+                <image class="sec-img" src="https://{{item.pic}}" background-size="cover"></image>
               </view>
               <view class="bottom-sec">
                 <view class="pirce-wrapper">
